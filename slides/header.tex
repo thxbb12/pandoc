@@ -1,0 +1,89 @@
+% ======[Font sizes]======
+% \fontsize{6}{6}
+% \tiny
+% \scriptsize
+% \footnotesize
+% \small
+% \normalsize
+% \large
+% \Large
+% \LARGE
+% \huge
+% \Huge
+
+% Useful tips here: http://pages.stat.wisc.edu/~yandell/statgen/ucla/Help/Producing%20slide%20shows%20with%20Pandoc.html
+
+% ======[Best themes]======
+% metropolis,Madrid,Boadilla
+
+\usetheme{metropolis}
+
+% ======[Available themes]======
+% JLTree,PhnomPenh,DetlevCM,Cuerna,AnnArbor,Antibes,bars,Bergen,Berkeley
+% Berlin,Boadilla,boxes,CambridgeUS,classic,compatibility,Copenhagen,Darmstadt
+% default,Dresden,EastLansing,Frankfurt,Goettingen,Hannover,Ilmenau,JuanLesPins
+% lined,Luebeck,Madrid,Malmoe,Marburg,Montpellier,PaloAlto,Pittsburgh,plain
+% Rochester,shadow,sidebar,Singapore,split,Szeged,tree,Warsaw
+% Themes requiring extra styles:
+% nirma,upenn-bc,SaintPetersburg,epyt,fibeamer
+
+%\usecolortheme{albatross}
+
+% ======[Available color themes]======
+% albatross,beaver,beetle,crane,default,dolphin,dove,fly,lily,monarca,
+% orchid,rose,seagull,seahorse,sidebartab,spruce,structure,whale,wolverine
+
+% ======[Re-define \item to increase the gap between items (global)]======
+\let\olditem\item
+\def\item{\olditem\itemsep3pt}
+
+% ======[Slide number and total in lower right]======
+\setbeamertemplate{footline}{
+    \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[30pt]{
+          \usebeamerfont{footline}\usebeamercolor[fg]{footline}\insertframenumber/\inserttotalframenumber}}}\hspace*{5pt}}
+
+% ======[Redefine \includegraphics]======
+% It is so that unless explicit options are given,
+% the image width will not exceed the width of the page.
+% Images get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+%\usepackage{graphicx}
+%\makeatletter
+%\def\ScaleIfNeeded{
+%  \ifdim\Gin@nat@width>\linewidth
+%    \linewidth
+%  \else
+%    \Gin@nat@width
+%  \fi
+%}
+%\makeatother
+%\let\Oldincludegraphics\includegraphics
+%\renewcommand{\includegraphics}[2][]{\Oldincludegraphics[width=\ScaleIfNeeded]{#2}}
+
+\lstset{
+%    basicstyle=\fontsize{10}{10}\ttfamily,
+    basicstyle=\ttfamily,
+    keywordstyle=\color[rgb]{0.13,0.29,0.53}\bfseries,
+    stringstyle=\color[rgb]{0.31,0.60,0.02},
+    identifierstyle=\color[rgb]{0.56,0.13,0},
+    commentstyle=\color[rgb]{0.56,0.35,0.01}\itshape,    
+    backgroundcolor=\color[RGB]{238,238,238},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    captionpos=b,
+    breaklines=true,
+    %breakatwhitespace=true,
+    %breakautoindent=true,
+    %linewidth=\textwidth,
+    extendedchars=true,
+    columns=fixed,
+    frame=trbl,
+    %frameround=tttt,
+    framesep=4pt,
+    %postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
+
+\newcommand{\begincols}[1]{\begin{columns}{#1}} 
+\newcommand{\stopcols}{\end{columns}}
