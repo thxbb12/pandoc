@@ -311,3 +311,9 @@ Dans les exercices pour avoir la numerotation automatique:
 - installer le filtre "pandoc-numbering"
 Et ecrire: Exercice +.#
 -->
+
+[//]: # ----------------------------------------------------------------
+## Questions
+
+\center
+\fontsize{150}{150} \selectfont ?
