@@ -2,15 +2,18 @@
 author: Florent Gluck - Florent.Gluck@hesge.ch
 title: Pandoc Slide Examples
 subtitle: This is a subtitle
-date: Version 0.1
+date: \vspace{0.5cm} \scriptsize Version 0.1
 pandoc-latex-fontsize:
-  - classes: [small]
-    size: scriptsize
   - classes: [tiny]
     size: tiny
+  - classes: [verysmall]
+    size: scriptsize
+  - classes: [small]
+    size: footnotesize
   - classes: [huge, important]
     size: huge
 ---
+
 
 [//]: # ----------------------------------------------------------------
 # Part 1
@@ -252,10 +255,10 @@ Command   Description
 ![](images/01-IBM_System_370.png){ width=50% }
 
 [//]: # ----------------------------------------------------------------
-## Image shifted of an arbitrary offset
+## Image shifted left
 
 \begin{center}
-\hspace*{-6mm}\includegraphics[width=12cm]{images/01-os_shares.png}
+\hspace*{-30mm}\includegraphics[width=12cm]{images/01-IBM_System_370.png}
 \end{center}
 
 [//]: # ----------------------------------------------------------------
@@ -324,3 +327,5 @@ Et ecrire: Exercice +.#
 
 \center
 \fontsize{150}{150} \selectfont ?
+
+\vspace{3cm}
