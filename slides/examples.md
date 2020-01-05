@@ -252,6 +252,13 @@ Command   Description
 ![](images/01-IBM_System_370.png){ width=50% }
 
 [//]: # ----------------------------------------------------------------
+## Image shifted of an arbitrary offset
+
+\begin{center}
+\hspace*{-6mm}\includegraphics[width=12cm]{images/01-os_shares.png}
+\end{center}
+
+[//]: # ----------------------------------------------------------------
 # Part 3
 
 [//]: # ----------------------------------------------------------------
@@ -272,7 +279,7 @@ Command   Description
 	- defnes system view
 
 :::
-::::::  
+::::::
 
 [//]: # ----------------------------------------------------------------
 ## Footnote
