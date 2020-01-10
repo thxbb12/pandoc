@@ -303,7 +303,7 @@ Definitions[^1]:
 Block text
 
 [//]: # ----------------------------------------------------------------
-## Special characters
+## Special characters (symbols)
 
 - greater or equal: $\geq$
 - not equal: $\neq$
