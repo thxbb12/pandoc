@@ -3,4 +3,4 @@
 f=$(basename "$1")
 f_no_ext="${f%.*}"
 
-pandoc -V solutions:true -s --listings --template=/pandoc/header/labs_header.tex /docs/$f -o /docs/"$f_no_ext"_corr.pdf
+pandoc -V solutions:true -s --listings --template=/pandoc/header/labs_header.tex /src/$f -o /src/"$f_no_ext"_corr.pdf
