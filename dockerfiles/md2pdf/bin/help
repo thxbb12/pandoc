@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "help                 : this help"
+echo "build_slides <doc>   : generates a presentation (PDF) from the specified markdown file (.md)"
+echo "build_lab <doc>      : generates a practical lab (PDF) from the specified markdown file (.md)"
+echo "build_lab_corr <doc> : generates a practical lab with corrections (PDF) from the specified markdown file (.md)"
+
+exit 1

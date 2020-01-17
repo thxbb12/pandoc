@@ -1,3 +1,7 @@
+# What is it?
+
+A Dockerfile to create a pandoc docker image.
+
 ## Build the image
 ```
 docker build . -t pandoc:2.6

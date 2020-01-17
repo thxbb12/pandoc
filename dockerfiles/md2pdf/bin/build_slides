@@ -1,0 +1,6 @@
+#!/bin/bash
+
+f=$(basename "$1")
+f_no_ext="${f%.*}"
+
+pandoc -t beamer /docs/$f -o /docs/$f_no_ext.pdf --pdf-engine=pdflatex -H /pandoc/header/slides_header.tex --listings --filter pandoc-latex-fontsize --filter pandoc-numbering

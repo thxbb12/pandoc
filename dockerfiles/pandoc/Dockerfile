@@ -23,8 +23,8 @@ RUN wget --no-check-certificate https://github.com/jgm/pandoc/releases/download/
     
 RUN pip3 install setuptools && pip3 install pandoc-latex-fontsize && pip3 install pandoc-numbering
     
-RUN mkdir /docs
-VOLUME /docs
-WORKDIR /docs
+RUN mkdir /src
+VOLUME /src
+WORKDIR /src
 
 CMD ["pandoc" "-v"]
