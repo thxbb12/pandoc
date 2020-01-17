@@ -1,12 +1,14 @@
-INPUTS=$(wildcard *.md)
-OUTPUTS=$(INPUTS:%.md=%.pdf)
-OUTPUTS_CORR=$(INPUTS:%.md=%_corr.pdf)
+SRCS=$(wildcard *.md)
+PDFS=$(SRCS:%.md=%.pdf)
+PDFS_CORR=$(SRCS:%.md=%_corr.pdf)
 UID=$(shell id -u)
 GID=$(shell id -g)
 
-all: $(OUTPUTS) $(OUTPUTS_CORR)
+doc: $(PDFS)
 
-# pandoc -t beamer $< -o $@ -V theme:$(THEME) --pdf-engine=pdflatex --slide-level 2 -H header.tex --listings
+corr: $(PDFS_CORR)
+
+all: doc corr
 
 %.pdf: %.md
 	docker run --user $(UID):$(GID) --rm --mount type=bind,src=$(PWD),dst=/src md2pdf build_lab $<
@@ -15,4 +17,5 @@ all: $(OUTPUTS) $(OUTPUTS_CORR)
 	docker run --user $(UID):$(GID) --rm --mount type=bind,src=$(PWD),dst=/src md2pdf build_lab_corr $<
 
 clean:
-	rm -f $(OUTPUTS) $(OUTPUTS_CORR)
+	rm -f $(PDFS) $(PDFS_CORR)
+
