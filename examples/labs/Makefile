@@ -11,10 +11,10 @@ corr: $(PDFS_CORR)
 all: doc corr
 
 %.pdf: %.md
-	docker run --user $(UID):$(GID) --rm --mount type=bind,src=$(PWD),dst=/src md2pdf build_lab $<
+	docker run --user $(UID):$(GID) --rm --mount type=bind,src=$(PWD),dst=/src thxbb12/md2pdf build_lab $<
 
 %_corr.pdf: %.md
-	docker run --user $(UID):$(GID) --rm --mount type=bind,src=$(PWD),dst=/src md2pdf build_lab_corr $<
+	docker run --user $(UID):$(GID) --rm --mount type=bind,src=$(PWD),dst=/src thxbb12/md2pdf build_lab_corr $<
 
 clean:
 	rm -f $(PDFS) $(PDFS_CORR)
