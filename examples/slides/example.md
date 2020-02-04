@@ -24,9 +24,11 @@ pandoc-latex-fontsize:
 - **bold text**, *italic text*, `non proportional text`
 - bold  \textbf{Sample Text 0123}
 - upright \textup{Sample Text 0123}
+- fixed  \texttt{Sample Text 0123}
 - italic  \textit{Sample Text 0123}
 - slanted \textsl{Sample Text 0123}
 - small caps  \textsc{Sample Text 0123}
+- bold and fixed  \texttt{\textbf{Sample Text 0123}}
 
 blah blah \underline{blah blah} blah blah
 
@@ -305,6 +307,7 @@ Block text
 [//]: # ----------------------------------------------------------------
 ## Special characters (symbols)
 
+- power: $2^n$
 - greater or equal: $\geq$
 - not equal: $\neq$
 - right arrow: $\rightarrow$
