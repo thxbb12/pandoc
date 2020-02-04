@@ -8,8 +8,7 @@ date        : Octobre 2019
 papersize   : A4
 geometry    : margin=2.5cm
 colorlinks  : urlcolor
-fontfamily  : mathptmx
-fontsize    : 10pt
+fontsize    : 12pt
 ---
 
 # TP Docker basics
