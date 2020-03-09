@@ -6,7 +6,7 @@ author      :
      - "Assistant : Sebastien Chassot"
 date        : Octobre 2019
 papersize   : A4
-geometry    : margin=2.5cm
+geometry    : "left=2.5cm,right=2cm,top=1.5cm,bottom=2cm"
 colorlinks  : urlcolor
 fontsize    : 12pt
 ---
