@@ -2,7 +2,7 @@
 author: Florent Gluck - Florent.Gluck@hesge.ch
 title: Pandoc Slide Examples
 subtitle: This is a subtitle
-date: \vspace{0.5cm} \scriptsize Version 0.1
+date: \vspace{.5cm} \footnotesize \today
 pandoc-latex-fontsize:
   - classes: [tiny]
     size: tiny
@@ -13,7 +13,6 @@ pandoc-latex-fontsize:
   - classes: [huge, important]
     size: huge
 ---
-
 
 [//]: # ----------------------------------------------------------------
 # Part 1
