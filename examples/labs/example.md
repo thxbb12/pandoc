@@ -1,15 +1,20 @@
 ---
-title       : Virtualisation
+title       : My lab
 solutions   : false
 author      :
-     - "Professeur : Florent Gluck"
+     - "Professor : Florent Gluck"
      - "Assistant : Sebastien Chassot"
-date        : Octobre 2019
+date        : June 2020
 papersize   : A4
 geometry    : "left=2.5cm,right=2cm,top=1.5cm,bottom=2cm"
 colorlinks  : urlcolor
 fontsize    : 12pt
 ---
+
+<!--
+Comments...
+-->
+
 
 # TP Docker basics
 
@@ -47,6 +52,39 @@ $ sudo mkdir -p /etc/systemd/system/docker.service.d
 ...
 ```
 
+## Format du système de fichiers
+
+Le système de fichiers implémenté est basé sur une allocation des blocs de données indexées avec des pointeurs directs et indirects. Chaque fichier est associé à un inode qui contient les méta-données de celui-ci. Un bitmap d’inodes est utilisé afin de déterminer quels sont les inodes libres ou alloués. Similairement, un bitmap est utilisé pour déterminer les blocs de données libres ou alloués. Pour des raisons de simplicité, la notion de répertoire est inexistante et le nom de fichier est stoqué dans l'inode. Ainsi, le système de fichiers n’est pas hiérarchique et tous les fichiers sont stoqués "à plat".
+
+La structure du système de fichiers sur disque est illustrée en Figure 1.
+
+![Structure du système de fichiers sur disque](images/fs.png){ width=40% }
+
+La structure du superblock est la suivante :
+
+\small
+```
+typedef struct __attribute__ ((__packed__)) {
+	int8_t   signature[4];           // BFS followed by end of string (0)
+	uint8_t  version_major;          // 1 for now
+	uint8_t  version_minor;          // 0 for now
+	int8_t   label[32];              // includes the end of string (0)
+	uint32_t block_size;             // block size in bytes	
+	uint32_t inode_bitmap_start;     // at which block the inode bitmap starts
+	uint32_t inode_bitmap_block_count;  // #blocks for the inode bitmap
+	uint32_t datablock_bitmap_start; // at which block the block bitmap starts
+	uint32_t datablock_bitmap_block_count;  // #blocks for the block bitmap
+	uint32_t inode_start;           // at which block the inode table starts
+	uint32_t inode_count;           // inode count (1 inode = 64 bytes)
+	uint32_t inode_block_count;     // #blocks for the inode table
+	uint32_t datablocks_start;      // at which block the data blocks start
+	uint32_t datablock_count;       // #data blocks
+} superblock_t;
+```
+\normalsize
+
+Bien que le contenu du superblock soit au maximum de 512 bytes (la taille d’un secteur), il occupe physiquement un bloc sur le disque (le contenu du bloc qui suit la structure `superblock_t` est "paddée" de zéros). Ceci est volontaire, car ainsi le disque complet est divisé en blocs - que cela soit le superblock, les bitmaps, la table des inodes ou encore les blocs de données.
+
 ## Exercice 1
 
 Une série d'exercices se trouvent sur ...
@@ -61,3 +99,5 @@ blah blah blah
 \end{comment}
 
 Déterminez l'image du premier exercice...
+
+### \color{red}{Ce travail est à rendre sur Cyberlearn pour le jeudi 1er avril à 23h59 !}
