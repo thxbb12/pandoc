@@ -3,6 +3,8 @@ author: Florent Gluck - Florent.Gluck@hesge.ch
 title: Pandoc Slide Examples
 subtitle: This is a subtitle
 date: \vspace{.5cm} \footnotesize \today
+institute: \vspace{0.5cm} \tiny \textsuperscript{*}Many thanks to Prof. Ada Gavrilovska for letting me use some of the contents of her course "Introduction to Operating Systems" tought at Georgia Institut of Technology
+
 pandoc-latex-fontsize:
   - classes: [tiny]
     size: tiny
@@ -331,3 +333,15 @@ Et ecrire: Exercice +.#
 \fontsize{150}{150} \selectfont ?
 
 \vspace{3cm}
+
+[//]: # ----------------------------------------------------------------
+## Bibliography
+
+- Dockerfile reference (official)\
+`https://docs.docker.com/engine/reference/builder/`{.verysmall}
+
+- Best practices for writing Dockerfiles (official)\
+`https://docs.docker.com/develop/develop-images/dockerfile_best-practices/`{.verysmall}
+
+- Dockerfile tutorial by example - basics and best practices\
+`https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/`{.verysmall}
