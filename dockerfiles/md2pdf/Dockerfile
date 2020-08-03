@@ -1,4 +1,4 @@
-FROM thxbb12/pandoc:2.6
+FROM thxbb12/pandoc:2.10.1
 
 RUN mkdir -p /pandoc/header
 RUN mkdir -p /pandoc/bin

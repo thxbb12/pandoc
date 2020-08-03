@@ -20,7 +20,7 @@ RUN apt-get update -y \
 	wget vim net-tools \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget --no-check-certificate https://github.com/jgm/pandoc/releases/download/2.6/pandoc-2.6-1-amd64.deb && \
+RUN wget --no-check-certificate https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb && \
     dpkg -i pandoc* && \
     rm pandoc* && \
     apt-get clean
