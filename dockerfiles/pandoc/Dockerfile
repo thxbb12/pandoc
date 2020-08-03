@@ -10,10 +10,14 @@ RUN apt-get update -y \
     texlive-fonts-recommended \
     texlive-latex-base \
     texlive-latex-extra \
+	texlive-plain-generic \
+	texlive-lang-french \
     transfig \
+	lmodern \
     librsvg2-2 \
-    wget python3 python3-pip \
-	vim net-tools librsvg2-bin lmodern texlive-lang-french \
+	librsvg2-bin \
+    python3 python3-pip \
+	wget vim net-tools \
   && rm -rf /var/lib/apt/lists/*
 
 RUN wget --no-check-certificate https://github.com/jgm/pandoc/releases/download/2.6/pandoc-2.6-1-amd64.deb && \
