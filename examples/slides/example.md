@@ -30,12 +30,29 @@ pandoc-latex-fontsize:
 - slanted \textsl{Sample Text 0123}
 - small caps  \textsc{Sample Text 0123}
 - bold and fixed  \texttt{\textbf{Sample Text 0123}}
+- ~~this text is striked through~~
+- Some \underline{underlined text}
 
-blah blah \underline{blah blah} blah blah
+[//]: # ----------------------------------------------------------------
+## Text colors and alert
 
-- Default text color, \textcolor{red}{red text}, \textcolor{green}{green text},
+\small
 
-\alert{`alert` : attention ceci est une giraffe !}
+- \textcolor{myred}{myred}
+- \textcolor{myblue}{myblue MidnightBlue}
+- \textcolor{myorange}{myorange Bittersweet}
+- \textcolor{mygreen}{mygreen OliveGreen}
+- \textcolor{mylightgreen}{mylightgreen YellowGreen}
+- \textcolor{myyellow}{myyellow Goldenrod}
+- \textcolor{myviolet}{myviolet Periwinkle}
+- \textcolor{mypurple}{mypurple Orchid}
+- \textcolor{mylightorange}{mylightorange Orange}
+- \textcolor{mypink}{mypink Thistle}
+- \textcolor{Red}{Red}, \textcolor{red}{red}, \textcolor{blue}{blue}, \textcolor{green}{green}
+
+\vfill
+
+### \alert{this is an alert!}
 
 [//]: # ----------------------------------------------------------------
 ## Font sizes (1)
@@ -92,7 +109,7 @@ blah blah
 A `flushleft` paragraph
 
 [//]: # ----------------------------------------------------------------
-## Vertical space
+## Vertical space with `vspace`
 
 Blah blah blah... Blah blah blah...
 Blah blah blah... Blah blah blah...
@@ -103,37 +120,37 @@ Blah blah blah... Blah blah blah...
 Blah blah blah... Blah blah blah...
 
 [//]: # ----------------------------------------------------------------
-## Avec "vfill"
+## Vertical space with `vfill`
 
-Il en existe deux types de méthodes:
+There are 2 method types:
 
-* **méthodes d'instance** 
-  * elles sont rattachées à l'objet
-* **méthodes statiques** ou **de classe**
-  * elles sont rattachées à la classe 
-  * utilisation sans instanciation d'un objet
+* **instance methods** 
+  * linked to an object
+* **static methods** or **class methods**
+  * linked to the class
+  * they don't require the object to be instanciated
 
 \vfill
 
 ```{.java .numberLines .small}
-String test = "coucou";
+String test = "hello";
 test.toUpperCase();
 String.valueOf(1234);
 ```
 
 [//]: # ----------------------------------------------------------------
-## Sans "vfill"
+## Same as previous slide, but without `vfill`
 
-Il en existe deux types de méthodes:
+There are 2 method types:
 
-* **méthodes d'instance** 
-  * elles sont rattachées à l'objet
-* **méthodes statiques** ou **de classe**
-  * elles sont rattachées à la classe 
-  * utilisation sans instanciation d'un objet
+* **instance methods** 
+  * linked to an object
+* **static methods** or **class methods**
+  * linked to the class
+  * they don't require the object to be instanciated
 
 ```{.java .numberLines .small}
-String test = "coucou";
+String test = "hello";
 test.toUpperCase();
 String.valueOf(1234);
 ```
@@ -246,6 +263,15 @@ Command   Description
 -------- ---------------------------------------------------------
 
 [//]: # ----------------------------------------------------------------
+## Table (3)
+
+| ~~Default~~ | *left*  | **Center** | `Right`  |
+|---------|:------|:------:|-------:|
+|   High  | Cat 1 | A      | 100.00 |
+|   High  | Cat 2 | B      |  85.50 |
+|   Low   | Cat 3 | C      |  80.00 |
+
+[//]: # ----------------------------------------------------------------
 ## Image
 
 \centering
@@ -306,7 +332,7 @@ Definitions[^1]:
 Block text
 
 [//]: # ----------------------------------------------------------------
-## Special characters (symbols)
+## Special characters
 
 - power: $2^n$
 - greater or equal: $\geq$
@@ -320,12 +346,6 @@ Block text
 - thicker leftright arrow: $\Leftrightarrow$
 - long leftright arrow: $\longleftrightarrow$
 
-<!--
-Dans les exercices pour avoir la numerotation automatique:
-- installer le filtre "pandoc-numbering"
-Et ecrire: Exercice +.#
--->
-
 [//]: # ----------------------------------------------------------------
 ## Questions
 
@@ -337,11 +357,46 @@ Et ecrire: Exercice +.#
 [//]: # ----------------------------------------------------------------
 ## Bibliography
 
-- Dockerfile reference (official)\
-`https://docs.docker.com/engine/reference/builder/`{.verysmall}
+- Markdown and Pandoc tips\
+`https://www.flutterbys.com.au/stats/tut/tut17.3.html`{.verysmall}
 
-- Best practices for writing Dockerfiles (official)\
-`https://docs.docker.com/develop/develop-images/dockerfile_best-practices/`{.verysmall}
+- Basic markdown syntax\
+`https://www.markdownguide.org/basic-syntax/`{.verysmall}
 
-- Dockerfile tutorial by example - basics and best practices\
-`https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/`{.verysmall}
+- Tables in LaTeX\
+`https://www.overleaf.com/learn/latex/tables`{.verysmall}
+
+- Useful Pandoc tips\
+`http://pages.stat.wisc.edu/~yandell/statgen/ucla/Help/Producing%20slide%20shows%20with%20Pandoc.html`{.verysmall}
+
+- LaTeX colors\
+`https://en.wikibooks.org/wiki/LaTeX/Colors`{.verysmall}
+
+[//]: # ----------------------------------------------------------------
+## Bibliography (2)
+
+Markdown and Pandoc tips\
+
+  - `https://www.flutterbys.com.au/stats/tut/tut17.3.html`{.verysmall}
+
+Basic markdown syntax\
+
+  - `https://www.markdownguide.org/basic-syntax/`{.verysmall}
+
+Tables in LaTeX\
+
+  - `https://www.overleaf.com/learn/latex/tables`{.verysmall}
+
+Useful Pandoc tips\
+
+  - `http://pages.stat.wisc.edu/~yandell/statgen/ucla/Help/Producing%20slide%20shows%20with%20Pandoc.html`{.verysmall}
+
+LaTeX colors\
+
+  - `https://en.wikibooks.org/wiki/LaTeX/Colors`{.verysmall}
+
+<!--
+Dans les exercices pour avoir la numerotation automatique:
+- installer le filtre "pandoc-numbering"
+Et ecrire: Exercice +.#
+-->
