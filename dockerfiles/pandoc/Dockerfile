@@ -31,4 +31,4 @@ RUN mkdir /src
 VOLUME /src
 WORKDIR /src
 
-CMD ["pandoc" "-v"]
+CMD ["pandoc","-v"]
