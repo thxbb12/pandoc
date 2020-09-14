@@ -334,6 +334,10 @@ Block text
 [//]: # ----------------------------------------------------------------
 ## Special characters
 
+\small
+
+- tilde: $\sim$
+- approx: $\approx$
 - power: $2^n$
 - greater or equal: $\geq$
 - not equal: $\neq$
