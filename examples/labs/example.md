@@ -4,11 +4,12 @@ solutions   : false
 author      :
      - "Professor : Florent Gluck"
      - "Assistant : Sebastien Chassot"
-date        : June 2020
+date        : \today
 papersize   : A4
 geometry    : "left=2.5cm,right=2cm,top=1.5cm,bottom=2cm"
 colorlinks  : urlcolor
 fontsize    : 12pt
+lang        : fr-CH
 ---
 
 <!--
