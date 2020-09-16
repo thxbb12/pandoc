@@ -223,6 +223,17 @@ int main(int argc, char **argv) {
 ```
 
 [//]: # ----------------------------------------------------------------
+## Source Code inside item list
+
+- Pipes are powerful
+- Example:
+  ```{.small}
+  count=`find . -type f|wc -l`
+  echo "File count: $count"
+  }
+  ```
+
+[//]: # ----------------------------------------------------------------
 ## Table (1)
 
 \footnotesize
@@ -334,6 +345,7 @@ Block text
 [//]: # ----------------------------------------------------------------
 ## Special characters
 
+- approximation: $\approx$
 - power: $2^n$
 - greater or equal: $\geq$
 - not equal: $\neq$
@@ -355,7 +367,7 @@ Block text
 \vspace{3cm}
 
 [//]: # ----------------------------------------------------------------
-## Bibliography
+## Bibliography (1)
 
 - Markdown and Pandoc tips\
 `https://www.flutterbys.com.au/stats/tut/tut17.3.html`{.verysmall}
