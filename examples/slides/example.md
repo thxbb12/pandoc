@@ -5,6 +5,8 @@ subtitle: This is a subtitle
 date: \vspace{.5cm} \footnotesize \today
 institute: \vspace{0.5cm} \tiny \textsuperscript{*}Many thanks to Prof. Ada Gavrilovska for letting me use some of the contents of her course "Introduction to Operating Systems" tought at Georgia Institut of Technology
 
+# Latex colors listing: http://latexcolor.com/
+
 pandoc-latex-fontsize:
   - classes: [tiny]
     size: tiny
@@ -336,11 +338,29 @@ Definitions[^1]:
 [^1]: from the book "Hardware and Software Support for Virtualization"
 
 [//]: # ----------------------------------------------------------------
-## Blocks
+## Blocks (1/2)
+
+\definecolor{palechestnut}{rgb}{0.87, 0.68, 0.69}
+\setlength{\fboxsep}{6pt}
+\fcolorbox{black}{palechestnut!50}{\textbf{Calling conventions} = Protocol defining how to call a routine}
+
+\vspace{.5cm}
+
+- blah blah
+- pipo molo
+
+[//]: # ----------------------------------------------------------------
+## Blocks (2/2)
+
+The block below goes to the end of the slide
 
 \metroset{block=fill}
-### \alert{This is a block}
-Block text
+
+### \textcolor{myred}{Calling conventions}
+Protocol defining **how** to call a routine
+
+- blah blah
+- pipo molo
 
 [//]: # ----------------------------------------------------------------
 ## Special characters
@@ -370,7 +390,28 @@ Block text
 \vspace{3cm}
 
 [//]: # ----------------------------------------------------------------
-## Bibliography (1)
+## Bibliography (1/4)
+
+\small
+
+- Free book “PC Assembly Language”, Paul A. Carter\
+\scriptsize [http://pacman128.github.io/pcasm/](http://pacman128.github.io/pcasm/)
+\small
+
+- x86 Assembly Guide, University of Virginia Computer Science\
+\scriptsize [https://www.cs.virginia.edu/~evans/cs216/guides/x86.html](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
+\small
+
+- Intel x86 JUMP quick reference\
+\scriptsize [http://www.unixwiz.net/techtips/x86-jumps.html](http://www.unixwiz.net/techtips/x86-jumps.html)
+\small
+
+- x86 Instruction Set Reference\
+\scriptsize [https://c9x.me/x86/](https://c9x.me/x86/)
+\small
+
+[//]: # ----------------------------------------------------------------
+## Bibliography (2/4)
 
 - Markdown and Pandoc tips\
 `https://www.flutterbys.com.au/stats/tut/tut17.3.html`{.verysmall}
@@ -388,7 +429,7 @@ Block text
 `https://en.wikibooks.org/wiki/LaTeX/Colors`{.verysmall}
 
 [//]: # ----------------------------------------------------------------
-## Bibliography (2)
+## Bibliography (3/4)
 
 Markdown and Pandoc tips\
 
@@ -409,6 +450,21 @@ Useful Pandoc tips\
 LaTeX colors\
 
   - `https://en.wikibooks.org/wiki/LaTeX/Colors`{.verysmall}
+
+[//]: # ----------------------------------------------------------------
+## Bibliography (4/4)
+
+### \footnotesize Free book “PC Assembly Language”, Paul A. Carter
+\scriptsize [http://pacman128.github.io/pcasm/](http://pacman128.github.io/pcasm/)
+
+### \footnotesize x86 Assembly Guide, University of Virginia Computer Science
+\scriptsize [https://www.cs.virginia.edu/~evans/cs216/guides/x86.html](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
+
+### \footnotesize Intel x86 JUMP quick reference
+\scriptsize [http://www.unixwiz.net/techtips/x86-jumps.html](http://www.unixwiz.net/techtips/x86-jumps.html)
+
+### \footnotesize x86 Instruction Set Reference
+\scriptsize [https://c9x.me/x86/](https://c9x.me/x86/)
 
 <!--
 Dans les exercices pour avoir la numerotation automatique:
