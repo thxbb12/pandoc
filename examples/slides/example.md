@@ -346,21 +346,19 @@ Definitions[^1]:
 
 \vspace{.5cm}
 
-- blah blah
-- pipo molo
+- This is not part of the block
+- Neither is this
 
 [//]: # ----------------------------------------------------------------
 ## Blocks (2/2)
 
-The block below goes to the end of the slide
-
 \metroset{block=fill}
+\begin{block}{My block title}
+My block contents
+\end{block}
 
-### \textcolor{myred}{Calling conventions}
-Protocol defining **how** to call a routine
-
-- blah blah
-- pipo molo
+- This is not part of the block
+- Neither is this
 
 [//]: # ----------------------------------------------------------------
 ## Special characters
