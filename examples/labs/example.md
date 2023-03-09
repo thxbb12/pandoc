@@ -23,6 +23,8 @@ Comments...
 
 Le but de ce travail pratique est de se familiariser avec les manipulations de base des containers Docker et d'en comprendre le fonctionnement.
 
+Le premier travail est réalisé est décrit à la section [ici](#exercice-1)
+
 ## Préparation
 
 Sur la même machine hôte que celle utilisée lors des travaux pratiques précédents, installez le package nécessaire à l'utilisation des containers Docker. Pour rappel `apt-cache search` permet de réaliser une recherche par mot-clés dans la repository Ubuntu/Debian.
@@ -57,9 +59,9 @@ $ sudo mkdir -p /etc/systemd/system/docker.service.d
 
 Le système de fichiers implémenté est basé sur une allocation des blocs de données indexées avec des pointeurs directs et indirects. Chaque fichier est associé à un inode qui contient les méta-données de celui-ci. Un bitmap d’inodes est utilisé afin de déterminer quels sont les inodes libres ou alloués. Similairement, un bitmap est utilisé pour déterminer les blocs de données libres ou alloués. Pour des raisons de simplicité, la notion de répertoire est inexistante et le nom de fichier est stoqué dans l'inode. Ainsi, le système de fichiers n’est pas hiérarchique et tous les fichiers sont stoqués "à plat".
 
-La structure du système de fichiers sur disque est illustrée en Figure 1.
+La structure du système de fichiers sur disque est illustrée en Figure \ref{my_fig}.
 
-![Structure du système de fichiers sur disque](images/fs.png){ width=40% }
+![\label{my_fig} Structure du système de fichiers sur disque](images/fs.png){ width=40% }
 
 La structure du superblock est la suivante :
 
