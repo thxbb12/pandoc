@@ -340,25 +340,45 @@ Definitions[^1]:
 [//]: # ----------------------------------------------------------------
 ## Blocks (1/2)
 
+- The block below **cannot** span multiple lines:
+
+\vspace{.2cm}
+
 \definecolor{palechestnut}{rgb}{0.87, 0.68, 0.69}
 \setlength{\fboxsep}{6pt}
 \fcolorbox{black}{palechestnut!50}{\textbf{Calling conventions} = Protocol defining how to call a routine}
 
-\vspace{.5cm}
+\vspace{.7cm}
 
-- This is not part of the block
-- Neither is this
+- However, this block **can**:
+
+\vspace{.2cm}
+
+\definecolor{palechestnut}{rgb}{0.87, 0.68, 0.69}
+\setlength{\fboxsep}{6pt}
+\fcolorbox{black}{palechestnut!50}{\parbox{10cm}{If we want our box to span multiples lines, \textbf{the solution is to use parbox} with a specified size (length), here 10cm}}
 
 [//]: # ----------------------------------------------------------------
 ## Blocks (2/2)
 
 \metroset{block=fill}
-\begin{block}{My block title}
-My block contents
+\begin{block}{Definition}
+\textbf{Calling conventions} = Protocol defining how to call a routine\
+
+This box can span multiples lines by default which is more convenient than the example in the previous slide...
 \end{block}
+
+\vspace{.3cm}
 
 - This is not part of the block
 - Neither is this
+
+\vspace{.5cm}
+
+\metroset{block=fill}
+\begin{block}{Calling conventions \textnormal{= Protocol defining how to call a routine}}
+\end{block}
+
 
 [//]: # ----------------------------------------------------------------
 ## Special characters
