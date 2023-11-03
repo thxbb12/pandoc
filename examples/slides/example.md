@@ -285,6 +285,27 @@ Command   Description
 |   Low   | Cat 3 | C      |  80.00 |
 
 [//]: # ----------------------------------------------------------------
+## Table with horizontal lines using LaTeX (4)
+
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Header1} & \textbf{Header2} & \textbf{Header3} & \textbf{Header4} & \textbf{Header5} \\
+\hline
+& & & & \\
+pipo & molo & gato & blah & \\
+& & & & \\
+\hline
+& & & & \\
+& 3651 & 7821 & 9415 & 64157 \\
+& & & & \\
+\hline
+& & & & \\
+& humf & gargl & groumf & 42 \\
+& & & & \\
+\hline
+\end{tabular}
+
+[//]: # ----------------------------------------------------------------
 ## Image
 
 \centering
